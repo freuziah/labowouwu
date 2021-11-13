@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -23,7 +23,7 @@ int main()
 
     cout << "Task 3" << "\n";
     float A2, B2, C2;
-    cout << "write A, B and C" << "\n";
+    cout << "write A, B and C (C lies between A and B)" << "\n";
     cin >> A2 >> B2 >> C2;
     float AC2 = fabs(A2 - C2);
     float BC2 = fabs(B2 - C2);
