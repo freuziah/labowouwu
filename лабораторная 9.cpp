@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -77,7 +77,8 @@ int main()
 	A1 = A / C;
 	int B1 = B / C;
 	int C1 = A1 * B1;
-	cout << "Answer : " << C1 << " square(s)" << "\n" << "\n";
+	int NS = A * B - C * C * C1;
+	cout << "Answer : " << C1 << " square(s), " << NS << "\n" << "\n";
 
 	cout << "Task 5" << "\n";
 	int G;
