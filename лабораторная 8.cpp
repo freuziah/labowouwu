@@ -1,5 +1,6 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
+
 int main()
 {
 	cout << "Task 1" << "\n";
@@ -7,6 +8,10 @@ int main()
 	cout << "enter the number of bytes" << "\n";
 	cin >> byt;
 	int kil = byt / 1024;
+	int kil1 = byt % 1024;
+	if (kil1 > 0) {
+		kil = kil + 1;
+	}
 	cout << "Answer : " << kil << " kilobyte(s)" << "\n" << "\n";
 
 	cout << "Task 2" << "\n";
