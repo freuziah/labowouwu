@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -41,12 +41,60 @@ int main()
 	cout << "Answer: " << X1 << "\n" << "\n";
 
 	cout << "Task 6" << "\n";
-	float Q, W, E, Q1, W1, E1;
-	cout << "write A1, B1 and C1" << "\n";
-	cin >> Q >> W >> E;
-	cout << "write A2, B2 and C2" << "\n";
-	cin >> Q1 >> W1 >> E1;
-	float N = (E1 - (Q1 * E) / Q) / (W1 - (Q1 * W) / Q);
-	float M = (E - W * N) / Q;
-	cout << "Answer: x = " << M << ", y = " << N << "\n";
+	float a1, b1, a2, b2, x, y, c1, c2;
+	cout << "write a1, b1 and c1" << "\n";
+	cin >> a1 >> b1 >> c1;
+	cout << "write a2, b2 and c2" << "\n";
+	cin >> a2 >> b2 >> c2;
+	if (a1 == 0 and b1 == 0 and c1 == 0) {
+		cout << "the system of equations loses its meaning, the values of x and y cannot be found" << "\n";
+	}
+	else if (a1 == 0 and b1 == 0 and c1 != 0) {
+		cout << "if the coefficient at x and y are 0, the result should also be 0" << "\n";
+	}
+	else if (a2 == 0 and b2 == 0 and c2 != 0) {
+		cout << "if the coefficient at x and y are 0, the result should also be 0" << "\n";
+	}
+	else if (a2 == 0 and b2 == 0 and c2 == 0) {
+		cout << "the system of equations loses its meaning, the values of x and y cannot be found" << "\n";
+	}
+	else if (a2 == 0 and a1 == 0) {
+		cout << "the system of equations loses its meaning, the values of x and y cannot be found" << "\n";
+	}
+	else if (b2 == 0 and b1 == 0) {
+		cout << "the system of equations loses its meaning, the values of x and y cannot be found" << "\n";
+	}
+	else if (a1 == 0 and b1 != 0 and a2 != 0) {
+		y = c1 / b1;
+		x = (c2 - b2 * y) / a2;
+		cout << "x = " << x << "\n";
+		cout << "y = " << y << "\n";
+	}
+	else if (a1 != 0 and b1 == 0 and b2 != 0) {
+		x = c1 / a1;
+		y = (c2 - a2 * x) / b2;
+		cout << "x = " << x << "\n";
+		cout << "y = " << y << "\n";
+	}
+	else if (a2 == 0 and b2 != 0 and a1 != 0) {
+		y = c2 / b2;
+		x = (c1 - b1 * y) / a1;
+		cout << "x = " << x << "\n";
+		cout << "y = " << y << "\n";
+	}
+	else if (b2 == 0 and b2 != 0 and a2 != 0) {
+		x = c2 / a2;
+		y = (c1 - a1 * x) / b1;
+		cout << "x = " << x << "\n";
+		cout << "y = " << y << "\n";
+	}
+	else if (a2 != 0 and a1 != 0 and b2 != 0) {
+		b2 = b2 * (a1 / a2) - b1;
+		c2 = c2 * (a1 / a2) - c1;
+		y = c2 / b2;
+		x = (c1 - b1 * y) / a1;
+		cout << "x = " << x << "\n";
+		cout << "y = " << y << "\n";
+	}
+	return 0;
 }
