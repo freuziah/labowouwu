@@ -64,6 +64,12 @@ int main()
 	else if (b2 == 0 and b1 == 0) {
 		cout << "the system of equations loses its meaning, the values of x and y cannot be found" << "\n";
 	}
+	else if (a2 == a1 and b1 == b2 and c1 != c2) {
+		cout << "the system of equations loses its meaning, the values of x and y cannot be found" << "\n";
+	}
+	else if (a2 == a1 and b1 == b2 and c1 == c2) {
+		cout << "the system has an infinite number of solutions" << "\n";
+	}
 	else if (a1 == 0 and b1 != 0 and a2 != 0) {
 		y = c1 / b1;
 		x = (c2 - b2 * y) / a2;
@@ -96,5 +102,4 @@ int main()
 		cout << "x = " << x << "\n";
 		cout << "y = " << y << "\n";
 	}
-	return 0;
 }
